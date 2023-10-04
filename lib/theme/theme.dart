@@ -1,3 +1,4 @@
+import 'package:fitness_manager/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 final darkTheme = ThemeData(
@@ -5,26 +6,28 @@ final darkTheme = ThemeData(
     TargetPlatform.android: CupertinoPageTransitionsBuilder(),
     TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
   }),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xFF202020),
+  appBarTheme: AppBarTheme(
+    backgroundColor: AppColor.homePageBackground,
     elevation: 0.5,
     centerTitle: true,
-    iconTheme: IconThemeData(color: Colors.white),
+    iconTheme: IconThemeData(color: AppColor.homePageIcons),
     titleTextStyle: TextStyle(
-        color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700),
+        color: AppColor.homePageTitle,
+        fontSize: 20,
+        fontWeight: FontWeight.w700),
   ),
-  scaffoldBackgroundColor: const Color(0xFF202020),
+  scaffoldBackgroundColor: AppColor.homePageBackground,
   colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: Colors.amber,
+    primarySwatch: Colors.blue,
   ),
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
     bodyMedium: TextStyle(
-      color: Colors.white,
+      color: AppColor.homePageTitle,
       fontWeight: FontWeight.w500,
       fontSize: 18,
     ),
     labelSmall: TextStyle(
-      color: Color.fromARGB(255, 196, 196, 196),
+      color: AppColor.homePageSubtitle,
       fontWeight: FontWeight.w700,
       fontSize: 14,
     ),
