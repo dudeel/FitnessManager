@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
     final theme = Theme.of(context);
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
         child: Column(
           children: [
             Row(
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 200,
+              height: 180,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               child: Container(
-                padding: const EdgeInsets.only(left: 20, top: 25, right: 20),
+                padding: const EdgeInsets.only(left: 20, top: 15, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -153,13 +153,13 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 10),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 180,
+              height: 140,
               child: Stack(
                 alignment: Alignment.centerLeft,
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 120,
+                    height: 100,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: const DecorationImage(
@@ -183,10 +183,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 150,
+                    height: 160,
                     width: MediaQuery.of(context).size.width,
                     margin:
-                        const EdgeInsets.only(left: 20, right: 200, bottom: 50),
+                        const EdgeInsets.only(left: 20, right: 220, bottom: 35),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: const DecorationImage(
@@ -227,7 +227,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            const SizedBox(height: 5),
             Row(
               children: [
                 Text(
