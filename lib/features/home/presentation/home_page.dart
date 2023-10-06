@@ -64,15 +64,22 @@ class _HomePageState extends State<HomePage> {
                   style: theme.textTheme.titleSmall,
                 ),
                 Expanded(child: Container()),
-                Text(
-                  "Details",
-                  style: theme.textTheme.labelLarge,
-                ),
-                const SizedBox(width: 10),
-                Icon(
-                  Icons.arrow_forward,
-                  color: theme.textTheme.labelLarge?.color,
-                  size: 20,
+                InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Text(
+                        "Details",
+                        style: theme.textTheme.labelLarge,
+                      ),
+                      const SizedBox(width: 10),
+                      Icon(
+                        Icons.arrow_forward,
+                        color: theme.textTheme.labelLarge?.color,
+                        size: 20,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

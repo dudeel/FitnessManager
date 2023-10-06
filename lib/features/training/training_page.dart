@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_manager/core/styles/colors.dart';
+import 'dart:convert';
 
 class TrainingPage extends StatefulWidget {
   const TrainingPage({super.key});
@@ -9,6 +10,22 @@ class TrainingPage extends StatefulWidget {
 }
 
 class _TrainingPageState extends State<TrainingPage> {
+  List info = [];
+
+  _initData() {
+    DefaultAssetBundle.of(context)
+        .loadString("json/video_info.json")
+        .then((value) {
+      info = json.decode(value);
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initData();
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
