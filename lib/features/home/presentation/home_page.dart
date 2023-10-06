@@ -1,5 +1,4 @@
 import 'package:fitness_manager/core/styles/colors.dart';
-import 'package:fitness_manager/core/styles/theme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -134,7 +133,94 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 180,
+              child: Stack(
+                alignment: Alignment.centerLeft,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          "assets/banner.png",
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 40,
+                          offset: const Offset(8, 10),
+                          color: AppColor.gradientSecond.withOpacity(0.3),
+                        ),
+                        BoxShadow(
+                          blurRadius: 10,
+                          offset: const Offset(-1, -5),
+                          color: AppColor.gradientSecond.withOpacity(0.3),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 150,
+                    width: MediaQuery.of(context).size.width,
+                    margin:
+                        const EdgeInsets.only(left: 20, right: 200, bottom: 50),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          "assets/girl_like.png",
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: double.maxFinite,
+                    height: 100,
+                    margin:
+                        const EdgeInsets.only(left: 140, right: 20, top: 30),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "You are doing great",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "keep it up\nstick to your plan",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white70,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Text(
+                  "Area of focus",
+                  textAlign: TextAlign.left,
+                  style: theme.textTheme.titleSmall,
+                )
+              ],
+            ),
           ],
         ),
       ),
