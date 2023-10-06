@@ -32,7 +32,7 @@ class _TrainingPageState extends State<TrainingPage> {
             Container(
               padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
               width: MediaQuery.of(context).size.width,
-              height: 300,
+              height: 260,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -117,6 +117,53 @@ class _TrainingPageState extends State<TrainingPage> {
                     ],
                   ),
                 ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(50),
+                  ),
+                  color: AppColor.homePageBackground,
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 30),
+                    Row(
+                      children: [
+                        const SizedBox(width: 30),
+                        Text(
+                          "Circular 1 : Legs Toning",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.homePageTitle,
+                          ),
+                        ),
+                        Expanded(child: Container()),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.loop,
+                              size: 20,
+                              color: AppColor.homePageIcons,
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              "3 sec",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: AppColor.setsColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(width: 30),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
