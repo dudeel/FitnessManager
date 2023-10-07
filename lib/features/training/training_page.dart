@@ -1,6 +1,9 @@
+import 'package:fitness_manager/features/home/presentation/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_manager/core/styles/colors.dart';
 import 'dart:convert';
+
+import 'package:get/get.dart';
 
 class TrainingPage extends StatefulWidget {
   const TrainingPage({super.key});
@@ -55,10 +58,15 @@ class _TrainingPageState extends State<TrainingPage> {
                 children: [
                   Row(
                     children: [
-                      Icon(
-                        Icons.arrow_back_ios_new,
-                        size: 20,
-                        color: AppColor.secondPageIconColor,
+                      InkWell(
+                        onTap: () {
+                          Get.to(() => const HomePage());
+                        },
+                        child: Icon(
+                          Icons.arrow_back_ios_new,
+                          size: 20,
+                          color: AppColor.secondPageIconColor,
+                        ),
                       ),
                       Expanded(
                         child: Container(),
